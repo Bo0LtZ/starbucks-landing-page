@@ -1,4 +1,4 @@
-
+/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
@@ -6,94 +6,43 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-
-
-
+/* Seção principal */
 section {
     position: relative;
     width: 100%;
-    
     height: 100vh;
-    padding: 200px;
+    padding: 100px 50px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background: #fff;
+    text-align: center;
 }
 
-header {
-    
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
- 
-    padding: 20px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
+/* Cabeçalho */
 header .logo {
-    
-    position: relative;
     max-width: 80px;
-   
 }
 
-header ul {
-    position: relative;
-    display: flex;
-   
-}
-
-header ul li {
-    list-style: none;
-    
-}
-
-header ul li a {
-    display: inline-block;
+/* Caixa de texto */
+.text-box h2 {
     color: #333;
-    font-weight: 800;
-    margin-left: 40px;
-    text-decoration: none;
-
+    font-size: 3em;
+    font-weight: 500;
 }
 
-.container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.container .text-box {
-    position: relative;
-    max-width: 600px;
-}
-
-.container .text-box h2 {
-    
-    color: #333;
-    font-size: 4em;
-    font-weight: 500px;
-}
-
-.container .text-box h2 span {
-    
+.text-box h2 span {
     color: #017143;
     font-size: 1.2em;
     font-weight: 900;
 }
 
-.container .text-box p {
+.text-box p {
     color: #333;
 }
 
-.container .text-box a {
+.text-box a {
     display: inline-block;
     margin-top: 20px;
     padding: 8px 20px;
@@ -105,66 +54,29 @@ header ul li a {
     text-decoration: none;
 }
 
-.container .img-box {
-   
-    width: 600px;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 50px;
-    margin-top: 50px;
-}
-
-.container .img-box img {
+/* Caixa de imagem */
+.img-box img {
     max-width: 340px;
 }
 
-.thumb {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
-    display: flex;
-}
-
-.thumb li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-
+/* Miniaturas */
+.list-inline-item img {
+    max-width: 80px;
     cursor: pointer;
     transition: 0.5s;
 }
 
-.thumb li:hover {
-    transform: translateY(-15px);
+.list-inline-item img:hover {
+    transform: translateY(-10px);
 }
 
-.thumb li img {
-    max-width: 600px;
-}
-
-.social {
-    position: absolute;
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.social li {
-    list-style: none;
-}
-
-.social li a {
-    display: inline-block;
-    margin: 5px 0;
-    transform: scale(0.6);
+/* Ícones sociais */
+.list-inline a img {
+    max-width: 40px;
     filter: invert(1);
 }
 
+/* Estilização do círculo */
 .circle {
     position: absolute;
     top: 0;
@@ -173,103 +85,5 @@ header ul li a {
     height: 100%;
     background: #017143;
     clip-path: circle(600px at right 800px);
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 1024px) {
-section {
-padding: 100px 50px;
-height: auto;
-flex-direction: column;
-text-align: center;
-}
-
-.container {
-    padding: 30px;
-flex-direction: column;
-text-align: center;
-}
-
-.container .text-box h2 {
-font-size: 3em;
-}
-
-.container .img-box {
-
-
-width: 100%;
-justify-content: center;
-padding: 0;
-}
-
-.container .img-box img {
-
-max-width: 250px;
-}
-
-.thumb {
-
-flex-direction: row;
-bottom: 10px;
-}
-
-.social {
-right: 10px;
-}
-}
-
-@media (max-width: 768px) {
-header {
-
-flex-direction: column;
-align-items: center;
-text-align: center;
-}
-
-
-header .logo {
-    
-max-width: 60px;
-}
-
-header ul {
-    
-flex-direction: column;
-margin-top: 10px;
-}
-
-header ul li {
-margin-left: 0;
-margin-bottom: 10px;
-}
-
-.container .text-box h2 {
-
-font-size: 2.5em;
-}
-}
-
-@media (max-width: 480px) {
-section {
-
-padding: 50px 20px;
-}
-
-.container .text-box h2 {
-font-size: 2em;
-}
-
-.container .img-box img {
-  
-max-width: 200px;
-}
-
-.thumb li img {
-   
-max-width: 50px;
-}
-
-.social {
-right: 5px;
-}
+    z-index: -1;
 }
